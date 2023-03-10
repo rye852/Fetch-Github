@@ -1,0 +1,95 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Cairo', sans-serif;
+}
+.container {
+  max-width: 800px;
+  background-color: #84a98c;
+  margin: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.container .get-repo {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #52796f;
+}
+.container .get-repo input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 20px;
+  height: 54px;
+  background-color: #84a98c;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  caret-color: white;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .get-repo input::placeholder {
+  color: white;
+  font-family: 'Cairo', sans-serif;
+  letter-spacing: 1.2px;
+}
+.container .get-repo .get-btn {
+  width: 140px;
+  height: 54px;
+  border-radius: 6px;
+  margin-left: 10px;
+  background-color: #84a98c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Cairo', sans-serif;
+  text-align: center;
+  line-height: 54px;
+  font-weight: bold;
+  overflow: hidden;
+}
+.container .show-data {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+}
+.show-data > div {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+  padding: 5px;
+}
+.show-data > div:not(:last-of-type) {
+  border-bottom: 1px solid white;
+}
+.show-data > div .repo-name {
+  flex: 1;
+  text-align: start;
+  text-transform: capitalize;
+}
+.show-data > div .show-more {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 2px 8px;
+  transition: 0.3s;
+  border-radius: 8px;
+  color: #ddd;
+}
+.show-data > div .show-more:hover {
+  background-color: #52796f;
+}
+@media (max-width: 767px) {
+  .show-data > div {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
